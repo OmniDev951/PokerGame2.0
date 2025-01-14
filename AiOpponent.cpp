@@ -381,7 +381,23 @@ bool AiOpponent::fold() {
 void AiOpponent::setMoneyAlreadyBetThisRoundAI() {
     moneyAlreadyBetThisRoundAI = 0;
 }
-
+void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int handValuePlayer) {
+    handValueAI = this->evaluateHandAI(vector<PlayingCard> (aiHand),vector<PlayingCard> (communityCards));
+    if (handValueAI > handValuePlayer and winner == "AI") {
+        this->descionThisRoundAI();
+        if (descionThisRoundAI == 1) {
+            betFactor += 2;
+        }
+        else if (descionThisRoundAI == 2) {
+            matchFactor += 2;
+        }
+    }
+    else if (handValueAI > handValuePlayer and winner == "Player") {
+        foldFactor -= 3;
+        matchFactor += 3;
+        betFactor += 5;
+    }
+}
 
 
 
