@@ -7,6 +7,9 @@ using namespace std;
 int main() {
     GameLoop game;
     game.gameLoop();
+    cout << "Round one..." << endl;
+    game.gameLoop();
+    cout << "Good job your code worked!!!" << endl;
     return 0;
 }
 

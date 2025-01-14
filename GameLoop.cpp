@@ -16,10 +16,43 @@ GameLoop::GameLoop() {
     ante = 0;
     isBettingRound = false;
     initialAnte = 0;
-    int AIhandvalue = 0;
+    AIhandvalue = 0;
     isBettingRoundOneFin = false;
     winner = "";
 }
+
+void GameLoop::gameLoop() {
+    this->setUpRound();
+    this->bettingRound1();
+    this->revealCommunityCards();
+    player.setMoneyAlreadyBetThisRound();
+    num1.setMoneyAlreadyBetThisRoundAI();
+    AIhandvalue = num1.evaluateHandAI(communityCards, num1.getHand());
+    num1.setHandValue(AIhandvalue);
+    this->bettingRound2();
+    this->determineWinner();
+    cout << "==============================" << endl;
+    cout << "And the winner is......" << endl;
+    this_thread::sleep_for(chrono::seconds(1));
+    cout << winner << "!!!!!!!!!" << endl;
+    cout << "==============================" << endl;
+    player.determineIfWinner(winner, pot);
+    num1.determineIfWinner(winner, pot);
+    communityCards = vector<PlayingCard> {};
+    pot = 0;
+    ante = 0;
+    isBettingRound = false;
+    isBettingRoundOneFin = false;
+    initialAnte = 0;
+    winner = "";
+    AIhandvalue = 0;
+    player.reset();
+    num1.reset();
+}
+
+
+
+
 
 void GameLoop::setUpRound() {
     deck.shuffle();
@@ -99,22 +132,7 @@ string GameLoop::strRiver() {
     return strOut;
 }
 
-void GameLoop::gameLoop() {
-    this->setUpRound();
-    this->bettingRound1();
-    this->revealCommunityCards();
-    player.setMoneyAlreadyBetThisRound();
-    num1.setMoneyAlreadyBetThisRoundAI();
-    AIhandvalue = num1.evaluateHandAI(communityCards, num1.getHand());
-    num1.setHandValue(AIhandvalue);
-    this->bettingRound2();
-    this->determineWinner();
-    cout << "==============================" << endl;
-    cout << "And the winner is......" << endl;
-    this_thread::sleep_for(chrono::seconds(1));
-    cout << winner << "!!!!!!!!!" << endl;
-    cout << "==============================" << endl;
-}
+
 
 double GameLoop::getAnte() {
     return ante;

@@ -39,6 +39,8 @@ public: // Public methods for the player
     double setMoneyAlreadyBetThisRound();
     string getDecisionThisRound();
     void setInRound(bool l);
+    void determineIfWinner(string winner, double pot);
+    void reset();
 };
 
 #endif PLAYER_H

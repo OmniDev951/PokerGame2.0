@@ -21,6 +21,16 @@ Player::Player() {
     handValue = 0;
 }
 
+void Player::reset() {
+    hand = vector<PlayingCard> {};
+    inRound = true;
+    moneyToBet = 0;
+    moneyAlreadyBetThisRound = 0;
+    handValue = 0;
+}
+
+
+
 // Method for asking the player if they want to join into that round
 bool Player::enterRound() {
     string enterRound = "";
@@ -300,6 +310,13 @@ string Player::getDecisionThisRound() {
 void Player::setInRound(bool l) {
     inRound = l;
 }
+
+void Player::determineIfWinner(string winner, double pot) {
+    if (winner == "Player") {
+        money += pot;
+    }
+}
+
 
 
 

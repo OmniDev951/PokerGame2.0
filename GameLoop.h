@@ -39,7 +39,6 @@ public:
     string strRiver();
     double getAnte();
     double getInitialAnte();
-
 };
 
 

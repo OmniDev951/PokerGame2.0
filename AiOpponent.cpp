@@ -15,8 +15,8 @@ using namespace std;
 
 AiOpponent::AiOpponent() {
     moneyAI = 200;
-    int pairSuitCount = 0;
-    int pairCount = 0;
+    pairSuitCount = 0;
+    pairCount = 0;
     aiHand = vector<PlayingCard> {};
     descionThisRoundAI = 0;
     inRoundAI = true;
@@ -27,6 +27,25 @@ AiOpponent::AiOpponent() {
     betFactor = 0;
 
 }
+
+void AiOpponent::reset() {
+    pairSuitCount = 0;
+    pairCount = 0;
+    aiHand = vector<PlayingCard> {};
+    descionThisRoundAI = 0;
+    inRoundAI = true;
+    moneyToBetThisRoundAI = 0;
+    moneyAlreadyBetThisRoundAI = 0;
+}
+
+
+void AiOpponent::determineIfWinner(string winner, double pot) {
+    if (winner == "AI") {
+        moneyAI += pot;
+    }
+}
+
+
 
 PlayingCard AiOpponent::deal(DeckOfCards &deck) {
     aiHand.push_back(deck.deal());

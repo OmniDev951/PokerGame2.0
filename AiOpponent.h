@@ -47,6 +47,8 @@ public:
     int getDescionThisRoundAI();
     void setInRoundAI(bool r);
     void setMoneyAlreadyBetThisRoundAI();
+    void determineIfWinner(string winner, double pot);
+    void reset();
 };
 
 
