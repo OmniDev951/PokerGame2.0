@@ -109,8 +109,11 @@ void GameLoop::gameLoop() {
     num1.setHandValue(AIhandvalue);
     this->bettingRound2();
     this->determineWinner();
-
-    cout << winner << endl;
+    cout << "==============================" << endl;
+    cout << "And the winner is......" << endl;
+    this_thread::sleep_for(chrono::seconds(1));
+    cout << winner << "!!!!!!!!!" << endl;
+    cout << "==============================" << endl;
 }
 
 double GameLoop::getAnte() {
@@ -363,6 +366,10 @@ string GameLoop::determineWinner() {
         }
         else if (handValue < handValuePlayer) {
             winner = "Player";
+            return winner;
+        }
+        else if (handValue == handValuePlayer) {
+            winner = "Tie";
             return winner;
         }
     }
