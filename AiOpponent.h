@@ -31,7 +31,7 @@ public:
     PlayingCard deal(DeckOfCards& deck);
     int makeDesicion(double MoneyToBet, double ante);
     int evaluateHandAI(const std::vector<PlayingCard>& aiHand, const std::vector<PlayingCard>& communityCards); // evaluates the value of the ai's hand
-    void makeDesicionsRound2(double MoneyToBet);
+    int makeDesicionsRound2(double MoneyToBet, double ante);
     vector<PlayingCard> getHand();
     int getHandValue();
     int setHandValue(int AIhandValue);
@@ -46,10 +46,14 @@ public:
     double getMoneyToBetThisRoundAI();
     int getDescionThisRoundAI();
     void setInRoundAI(bool r);
+    void setMoneyAlreadyBetThisRoundAI();
 };
 
 
 
 #endif //AIOPPONENT_H
+
+
+
 
 

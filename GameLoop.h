@@ -25,11 +25,13 @@ private:
     double initialAnte;
     int AIhandvalue;
     bool isBettingRoundOneFin;
+    string winner;
 public:
     GameLoop();
     void gameLoop();
     void setUpRound();
     void bettingRound1();
+    void bettingRound2();
     PlayingCard revealCommunityCards();
     string determineWinner();
     string strFlop();
@@ -37,11 +39,14 @@ public:
     string strRiver();
     double getAnte();
     double getInitialAnte();
+
 };
 
 
 
 #endif //GAMELOOP_H
+
+
 
 
 

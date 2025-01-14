@@ -13,7 +13,6 @@
 
 // Constructor for a player object
 Player::Player() {
-
     money = 200.00;
     hand = vector<PlayingCard>{};
     inRound = true;
@@ -40,16 +39,17 @@ bool Player::enterRound() {
         inRound = false;
     } else {
         cout << "\nYou have enough money to play this round!\n";
-        cout << "Would you like to 'Play' or 'Sit out'? " << endl;
+        cout << "Would you like to 'Play' or 'Sit'? " << endl;
         cin >> enterRound;
 
-        if (enterRound == "Sit out") {
-            cout << "\nAlright, sitting out this round.\n";
-            inRound = false;
-        } else if (enterRound == "Play") {
+        if (enterRound == "Play") {
             cout << "\nGreat choice! Deducting $10...\n";
             money -= 10;
             inRound = true;
+
+        } else if (enterRound == "Sit") {
+            cout << "\nAlright, sitting out this round.\n";
+            inRound = false;
         } else {
             cout << "\nInvalid input. Please decide next time.\n";
             inRound = false;
@@ -300,10 +300,6 @@ string Player::getDecisionThisRound() {
 void Player::setInRound(bool l) {
     inRound = l;
 }
-
-
-
-
 
 
 

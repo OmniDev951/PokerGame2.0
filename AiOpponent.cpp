@@ -233,7 +233,7 @@ int AiOpponent::evaluateHandAI(const std::vector<PlayingCard>& hand, const std::
     }
 }
 
-void AiOpponent::makeDesicionsRound2(double MoneyToBet) {
+int AiOpponent::makeDesicionsRound2(double MoneyToBet, double ante) {
     this->getHandValue();
     if (handValueAI == 8) {
         betFactor += 8;
@@ -280,6 +280,24 @@ void AiOpponent::makeDesicionsRound2(double MoneyToBet) {
         matchFactor -= 3;
         foldFactor += 5;
     }
+
+
+    if (betFactor > matchFactor and betFactor > foldFactor) {
+        this->bet(ante);
+        descionThisRoundAI = 1;
+        return descionThisRoundAI;
+    }
+    else if (matchFactor > betFactor and matchFactor > foldFactor) {
+        this->match(ante);
+        descionThisRoundAI = 2;
+        return descionThisRoundAI;
+    }
+    else if (foldFactor > matchFactor and foldFactor > betFactor) {
+        this->fold();
+        descionThisRoundAI = 3;
+        return descionThisRoundAI;
+    }
+
 }
 vector<PlayingCard> AiOpponent::getHand() {
     return aiHand;
@@ -341,6 +359,13 @@ bool AiOpponent::fold() {
     inRoundAI = false;
     return inRoundAI;
 }
+void AiOpponent::setMoneyAlreadyBetThisRoundAI() {
+    moneyAlreadyBetThisRoundAI = 0;
+}
+
+
+
+
 
 
 
