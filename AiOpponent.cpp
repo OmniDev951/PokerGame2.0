@@ -23,7 +23,7 @@ AiOpponent::AiOpponent() {
     inRoundAI = true;
     moneyToBetThisRoundAI = 0;
     moneyAlreadyBetThisRoundAI = 0;
-    foldFactor = 0;
+    foldFactor = -10;
     matchFactor = 0;
     betFactor = 0;
     wins = 1;

@@ -14,6 +14,7 @@ using namespace std;
 class Player {
 private: // Private data members for the player class
     vector<PlayingCard> hand;
+    double earnings;
     double money; // a double for the amount of money the player has
     double moneyAlreadyBetThisRound; // the amount of money the player has already bet this round
     bool inRound; // Boolean for if the player is still in this round
@@ -41,6 +42,7 @@ public: // Public methods for the player
     void setInRound(bool l);
     void determineIfWinner(string winner, double pot);
     void reset();
+    double getEarnings();
 };
 
 #endif PLAYER_H

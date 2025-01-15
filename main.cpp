@@ -27,7 +27,7 @@ int main() {
         else if (WantToPlayStillinput == "no") {
             cout << "Well it was fun playing partner" << endl;
             double printedEarnigs = game.getEarnings();
-            cout << "You made " << printedEarnigs << "dollars!!!" << endl;
+            cout << "You made " << printedEarnigs << " dollars!!!" << endl;
             if (printedEarnigs >= 100) {
                 cout << "Stopping here seems like a mistake but whatever you say partner..." << endl;
             }

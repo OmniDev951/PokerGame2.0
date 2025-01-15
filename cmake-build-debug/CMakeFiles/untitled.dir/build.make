@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files (x86)\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files (x86)\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\PokerGame2.0
+CMAKE_SOURCE_DIR = C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\PokerGame2.0\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/untitled.dir/depend.make
@@ -69,102 +69,102 @@ include CMakeFiles/untitled.dir/progress.make
 include CMakeFiles/untitled.dir/flags.make
 
 CMakeFiles/untitled.dir/main.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/main.cpp.obj: E:/PokerGame2.0/main.cpp
+CMakeFiles/untitled.dir/main.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/main.cpp
 CMakeFiles/untitled.dir/main.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/main.cpp.obj -MF CMakeFiles\untitled.dir\main.cpp.obj.d -o CMakeFiles\untitled.dir\main.cpp.obj -c E:\PokerGame2.0\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/main.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/main.cpp.obj -MF CMakeFiles\untitled.dir\main.cpp.obj.d -o CMakeFiles\untitled.dir\main.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\main.cpp
 
 CMakeFiles/untitled.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\main.cpp > CMakeFiles\untitled.dir\main.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\main.cpp > CMakeFiles\untitled.dir\main.cpp.i
 
 CMakeFiles/untitled.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\main.cpp -o CMakeFiles\untitled.dir\main.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\main.cpp -o CMakeFiles\untitled.dir\main.cpp.s
 
 CMakeFiles/untitled.dir/PlayingCard.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/PlayingCard.cpp.obj: E:/PokerGame2.0/PlayingCard.cpp
+CMakeFiles/untitled.dir/PlayingCard.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/PlayingCard.cpp
 CMakeFiles/untitled.dir/PlayingCard.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/PlayingCard.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/PlayingCard.cpp.obj -MF CMakeFiles\untitled.dir\PlayingCard.cpp.obj.d -o CMakeFiles\untitled.dir\PlayingCard.cpp.obj -c E:\PokerGame2.0\PlayingCard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/PlayingCard.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/PlayingCard.cpp.obj -MF CMakeFiles\untitled.dir\PlayingCard.cpp.obj.d -o CMakeFiles\untitled.dir\PlayingCard.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\PlayingCard.cpp
 
 CMakeFiles/untitled.dir/PlayingCard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/PlayingCard.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\PlayingCard.cpp > CMakeFiles\untitled.dir\PlayingCard.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\PlayingCard.cpp > CMakeFiles\untitled.dir\PlayingCard.cpp.i
 
 CMakeFiles/untitled.dir/PlayingCard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/PlayingCard.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\PlayingCard.cpp -o CMakeFiles\untitled.dir\PlayingCard.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\PlayingCard.cpp -o CMakeFiles\untitled.dir\PlayingCard.cpp.s
 
 CMakeFiles/untitled.dir/DeckOfCards.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/DeckOfCards.cpp.obj: E:/PokerGame2.0/DeckOfCards.cpp
+CMakeFiles/untitled.dir/DeckOfCards.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/DeckOfCards.cpp
 CMakeFiles/untitled.dir/DeckOfCards.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled.dir/DeckOfCards.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/DeckOfCards.cpp.obj -MF CMakeFiles\untitled.dir\DeckOfCards.cpp.obj.d -o CMakeFiles\untitled.dir\DeckOfCards.cpp.obj -c E:\PokerGame2.0\DeckOfCards.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled.dir/DeckOfCards.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/DeckOfCards.cpp.obj -MF CMakeFiles\untitled.dir\DeckOfCards.cpp.obj.d -o CMakeFiles\untitled.dir\DeckOfCards.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\DeckOfCards.cpp
 
 CMakeFiles/untitled.dir/DeckOfCards.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/DeckOfCards.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\DeckOfCards.cpp > CMakeFiles\untitled.dir\DeckOfCards.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\DeckOfCards.cpp > CMakeFiles\untitled.dir\DeckOfCards.cpp.i
 
 CMakeFiles/untitled.dir/DeckOfCards.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/DeckOfCards.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\DeckOfCards.cpp -o CMakeFiles\untitled.dir\DeckOfCards.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\DeckOfCards.cpp -o CMakeFiles\untitled.dir\DeckOfCards.cpp.s
 
 CMakeFiles/untitled.dir/Player.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/Player.cpp.obj: E:/PokerGame2.0/Player.cpp
+CMakeFiles/untitled.dir/Player.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/Player.cpp
 CMakeFiles/untitled.dir/Player.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled.dir/Player.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/Player.cpp.obj -MF CMakeFiles\untitled.dir\Player.cpp.obj.d -o CMakeFiles\untitled.dir\Player.cpp.obj -c E:\PokerGame2.0\Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled.dir/Player.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/Player.cpp.obj -MF CMakeFiles\untitled.dir\Player.cpp.obj.d -o CMakeFiles\untitled.dir\Player.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\Player.cpp
 
 CMakeFiles/untitled.dir/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/Player.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\Player.cpp > CMakeFiles\untitled.dir\Player.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\Player.cpp > CMakeFiles\untitled.dir\Player.cpp.i
 
 CMakeFiles/untitled.dir/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/Player.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\Player.cpp -o CMakeFiles\untitled.dir\Player.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\Player.cpp -o CMakeFiles\untitled.dir\Player.cpp.s
 
 CMakeFiles/untitled.dir/AIPlayer.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/AIPlayer.cpp.obj: E:/PokerGame2.0/AIPlayer.cpp
+CMakeFiles/untitled.dir/AIPlayer.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/AIPlayer.cpp
 CMakeFiles/untitled.dir/AIPlayer.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled.dir/AIPlayer.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/AIPlayer.cpp.obj -MF CMakeFiles\untitled.dir\AIPlayer.cpp.obj.d -o CMakeFiles\untitled.dir\AIPlayer.cpp.obj -c E:\PokerGame2.0\AIPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled.dir/AIPlayer.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/AIPlayer.cpp.obj -MF CMakeFiles\untitled.dir\AIPlayer.cpp.obj.d -o CMakeFiles\untitled.dir\AIPlayer.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\AIPlayer.cpp
 
 CMakeFiles/untitled.dir/AIPlayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/AIPlayer.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\AIPlayer.cpp > CMakeFiles\untitled.dir\AIPlayer.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\AIPlayer.cpp > CMakeFiles\untitled.dir\AIPlayer.cpp.i
 
 CMakeFiles/untitled.dir/AIPlayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/AIPlayer.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\AIPlayer.cpp -o CMakeFiles\untitled.dir\AIPlayer.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\AIPlayer.cpp -o CMakeFiles\untitled.dir\AIPlayer.cpp.s
 
 CMakeFiles/untitled.dir/GameLoop.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/GameLoop.cpp.obj: E:/PokerGame2.0/GameLoop.cpp
+CMakeFiles/untitled.dir/GameLoop.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/GameLoop.cpp
 CMakeFiles/untitled.dir/GameLoop.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled.dir/GameLoop.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/GameLoop.cpp.obj -MF CMakeFiles\untitled.dir\GameLoop.cpp.obj.d -o CMakeFiles\untitled.dir\GameLoop.cpp.obj -c E:\PokerGame2.0\GameLoop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled.dir/GameLoop.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/GameLoop.cpp.obj -MF CMakeFiles\untitled.dir\GameLoop.cpp.obj.d -o CMakeFiles\untitled.dir\GameLoop.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\GameLoop.cpp
 
 CMakeFiles/untitled.dir/GameLoop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/GameLoop.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\GameLoop.cpp > CMakeFiles\untitled.dir\GameLoop.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\GameLoop.cpp > CMakeFiles\untitled.dir\GameLoop.cpp.i
 
 CMakeFiles/untitled.dir/GameLoop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/GameLoop.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\GameLoop.cpp -o CMakeFiles\untitled.dir\GameLoop.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\GameLoop.cpp -o CMakeFiles\untitled.dir\GameLoop.cpp.s
 
 CMakeFiles/untitled.dir/AiOpponent.cpp.obj: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/AiOpponent.cpp.obj: E:/PokerGame2.0/AiOpponent.cpp
+CMakeFiles/untitled.dir/AiOpponent.cpp.obj: C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/AiOpponent.cpp
 CMakeFiles/untitled.dir/AiOpponent.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled.dir/AiOpponent.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/AiOpponent.cpp.obj -MF CMakeFiles\untitled.dir\AiOpponent.cpp.obj.d -o CMakeFiles\untitled.dir\AiOpponent.cpp.obj -c E:\PokerGame2.0\AiOpponent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled.dir/AiOpponent.cpp.obj"
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/AiOpponent.cpp.obj -MF CMakeFiles\untitled.dir\AiOpponent.cpp.obj.d -o CMakeFiles\untitled.dir\AiOpponent.cpp.obj -c C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\AiOpponent.cpp
 
 CMakeFiles/untitled.dir/AiOpponent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled.dir/AiOpponent.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\PokerGame2.0\AiOpponent.cpp > CMakeFiles\untitled.dir\AiOpponent.cpp.i
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\AiOpponent.cpp > CMakeFiles\untitled.dir\AiOpponent.cpp.i
 
 CMakeFiles/untitled.dir/AiOpponent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/AiOpponent.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\PokerGame2.0\AiOpponent.cpp -o CMakeFiles\untitled.dir\AiOpponent.cpp.s
+	C:\PROGRA~2\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\AiOpponent.cpp -o CMakeFiles\untitled.dir\AiOpponent.cpp.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
@@ -190,7 +190,7 @@ untitled.exe: CMakeFiles/untitled.dir/build.make
 untitled.exe: CMakeFiles/untitled.dir/linkLibs.rsp
 untitled.exe: CMakeFiles/untitled.dir/objects1.rsp
 untitled.exe: CMakeFiles/untitled.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable untitled.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable untitled.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\untitled.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -202,6 +202,6 @@ CMakeFiles/untitled.dir/clean:
 .PHONY : CMakeFiles/untitled.dir/clean
 
 CMakeFiles/untitled.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\PokerGame2.0 E:\PokerGame2.0 E:\PokerGame2.0\cmake-build-debug E:\PokerGame2.0\cmake-build-debug E:\PokerGame2.0\cmake-build-debug\CMakeFiles\untitled.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0 C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0 C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug C:\Users\ochsjax000\Documents\GitHub\PokerGame2.0\cmake-build-debug\CMakeFiles\untitled.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/untitled.dir/depend
 
