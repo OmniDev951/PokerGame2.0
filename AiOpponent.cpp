@@ -59,6 +59,10 @@ void AiOpponent::determineIfWinner(string winner, double pot) {
         moneyAI += pot;
         wins += 1;
     }
+    else if (winner == "Tie") {
+        moneyAI = moneyAI + (pot/2);
+        wins += 1;
+    }
 }
 
 

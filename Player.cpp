@@ -319,6 +319,9 @@ void Player::determineIfWinner(string winner, double pot) {
     if (winner == "Player") {
         money += pot;
     }
+    else if (winner == "Tie") {
+        money = money + (pot/2);
+    }
 }
 
 double Player::getEarnings() {
