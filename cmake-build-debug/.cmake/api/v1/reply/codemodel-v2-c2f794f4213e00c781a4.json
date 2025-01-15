@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0/cmake-build-debug",
-		"source" : "C:/Users/ochsjax000/Documents/GitHub/PokerGame2.0"
+		"build" : "E:/PokerGame2.0/cmake-build-debug",
+		"source" : "E:/PokerGame2.0"
 	},
 	"version" : 
 	{

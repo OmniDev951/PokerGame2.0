@@ -3,7 +3,7 @@
 //
 #include "AiOpponent.h"
 #include "DeckOfCards.h"
-
+#include <ranges>
 #include <vector>
 #include <algorithm>
 #include <map>
@@ -11,6 +11,7 @@
 #include <iostream>
 #include <iomanip>
 #include <ostream>
+
 using namespace std;
 
 AiOpponent::AiOpponent() {
@@ -25,10 +26,13 @@ AiOpponent::AiOpponent() {
     foldFactor = 0;
     matchFactor = 0;
     betFactor = 0;
-
+    wins = 0;
+    gamesPlayed = 0;
+    winPercentage = 0;
 }
 
 void AiOpponent::reset() {
+    gamesPlayed += 1;
     pairSuitCount = 0;
     pairCount = 0;
     aiHand = vector<PlayingCard> {};
@@ -42,6 +46,7 @@ void AiOpponent::reset() {
 void AiOpponent::determineIfWinner(string winner, double pot) {
     if (winner == "AI") {
         moneyAI += pot;
+        wins += 1;
     }
 }
 
@@ -382,6 +387,7 @@ void AiOpponent::setMoneyAlreadyBetThisRoundAI() {
     moneyAlreadyBetThisRoundAI = 0;
 }
 void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int handValuePlayer) {
+
     handValueAI = this->evaluateHandAI(vector<PlayingCard> (aiHand),vector<PlayingCard> (communityCards));
     if (handValueAI > handValuePlayer and winner == "AI") {
         this->descionThisRoundAI();
@@ -396,6 +402,44 @@ void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int h
         foldFactor -= 3;
         matchFactor += 3;
         betFactor += 5;
+    }
+
+
+    // calculate winning percentage
+    winPercentage = wins / gamesPlayed;
+
+    for (int i = 60; i < 100; i+=10){
+        if (winPercentage >= i) {
+            if (descionThisRoundAI == 1) {
+                betFactor += 2;
+                matchFactor += 1;
+                foldFactor --;
+            }
+            else if (descionThisRoundAI == 2) {
+                betFactor += 1;
+                matchFactor += 2;
+                foldFactor --;
+            }
+        }
+    }
+    for (int j = 60; j < 0; j-=10) {
+        if (winPercentage <= j) {
+            if (descionThisRoundAI == 1) {
+                betFactor -= 2;
+                matchFactor -= 1;
+                foldFactor += 1;
+            }
+            else if (descionThisRoundAI == 2) {
+                betFactor -= 1;
+                matchFactor -= 2;
+                foldFactor += 1;
+            }
+            else if (descionThisRoundAI == 3) {
+                betFactor += 5;
+                matchFactor += 4;
+                foldFactor -= 5;
+            }
+        }
     }
 }
 

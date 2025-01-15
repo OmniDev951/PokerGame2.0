@@ -26,6 +26,9 @@ private:
     int betFactor;
     int pairSuitCount;
     int pairCount;
+    int wins;
+    int gamesPlayed;
+    double winPercentage;
 public:
     AiOpponent();
     PlayingCard deal(DeckOfCards& deck);
