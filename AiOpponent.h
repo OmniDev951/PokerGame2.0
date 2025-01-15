@@ -53,6 +53,7 @@ public:
     void determineIfWinner(string winner, double pot);
     void reset();
     void adjust(string winner, vector<PlayingCard> communityCards, int handValuePlayer);
+    double getMoneyAI();
 };
 
 

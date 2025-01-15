@@ -22,11 +22,17 @@ Player::Player() {
 }
 
 void Player::reset() {
+    double moneyNeedToPositive = 0;
     hand = vector<PlayingCard> {};
     inRound = true;
     moneyToBet = 0;
     moneyAlreadyBetThisRound = 0;
     handValue = 0;
+    money += 10;
+    if (money < 0) {
+        moneyNeedToPositive = -1 * (0-money);
+        money += moneyNeedToPositive;
+    }
 }
 
 
@@ -126,15 +132,13 @@ double Player::match(double ante) {
 // Logic for if the player chooses to fold
 bool Player::foldRound() {
     cout << "==============================\n";
-    cout << "         Folding Phase         \n";
-    cout << "==============================\n";
     cout << "Fold the round!\n";
     cout << "You had already bet: $" << moneyAlreadyBetThisRound << "\n";
     cout << "Better luck next time!\n";
     inRound = false;
-    cout << "==============================\n";
     return inRound;
 }
+
 
 // Asks the player what they want to do each betting round
 void Player::matchBetFold(double ante) {
@@ -315,6 +319,11 @@ void Player::determineIfWinner(string winner, double pot) {
     if (winner == "Player") {
         money += pot;
     }
+}
+
+double Player::getEarnings() {
+    earnings = money - 200;
+    return earnings;
 }
 
 

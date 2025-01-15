@@ -28,6 +28,10 @@ private:
     string winner;
     int handValue;
     int handValuePlayer;
+    bool isAllInRound;
+    bool isRoundOneFin;
+    bool isAiFin;
+    bool isPlayerFin;
 public:
     GameLoop();
     void gameLoop();
@@ -41,6 +45,7 @@ public:
     string strRiver();
     double getAnte();
     double getInitialAnte();
+    double getEarnings();
 };
 
 

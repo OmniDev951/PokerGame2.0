@@ -7,6 +7,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <cstdio>
 using namespace std;
 
 //  for GameLoop
@@ -19,9 +20,13 @@ GameLoop::GameLoop() {
     AIhandvalue = 0;
     isBettingRoundOneFin = false;
     winner = "";
+    isAllInRound = false;
 }
 
 void GameLoop::gameLoop() {
+    if (num1.getMoneyAI() < 10) {
+        num1.setInRoundAI(false);
+    }
     this->setUpRound();
     this->bettingRound1();
     this->revealCommunityCards();
@@ -50,10 +55,6 @@ void GameLoop::gameLoop() {
     player.reset();
     num1.reset();
 }
-
-
-
-
 
 void GameLoop::setUpRound() {
     deck.shuffle();
@@ -133,8 +134,6 @@ string GameLoop::strRiver() {
     return strOut;
 }
 
-
-
 double GameLoop::getAnte() {
     return ante;
 }
@@ -146,15 +145,15 @@ double GameLoop::getInitialAnte() {
 void GameLoop::bettingRound1() {
     ante = initialAnte;
     pot += ante;
-    bool isRoundOneFin = false;
-    bool isAiFin = false;
-    bool isPlayerFin = false;
+    isRoundOneFin = false;
+    isAiFin = false;
+    isPlayerFin = false;
 
     while (isRoundOneFin == false) {
         isRoundOneFin = false; // Assume not finished until proven otherwise
 
         // AI Turn
-        if (num1.getInRoundAI()) {
+        if (num1.getInRoundAI() == true) {
             while (num1.getMoneyAlreadyBetThisRoundAI() < ante) {
                 num1.makeDesicion(player.getMoneyToBet(), ante);
 
@@ -182,12 +181,17 @@ void GameLoop::bettingRound1() {
                     break; // Exit AI's inner loop
                 }
             }
-        } else {
+        }
+        else if (player.getinRound() == true) {
+            isAiFin = true;
+            isPlayerFin = true;
+        }
+        else {
             isAiFin = true; // AI not in the round anymore
         }
 
         // Player Turn
-        if (player.getinRound()) {
+        if (player.getinRound() == true) {
             while (player.getMoneyAlreadyBetThisRound() < ante) {
                 player.matchBetFold(ante);
 
@@ -210,23 +214,24 @@ void GameLoop::bettingRound1() {
                 } else if (player.getDecisionThisRound() == "fold") { // Player folds
                     cout << "You folded..." << endl;
                     isPlayerFin = true;
-                    player.setInRound(false);
+                    player.setInRound(false); // Set player out of the round
                     break; // Exit Player's inner loop
                 }
             }
-        } else {
+        } else if (player.getinRound() == false) {
             isPlayerFin = true; // Player not in the round anymore
         }
 
         // Check if the round is finished
-        if (isAiFin == true & isPlayerFin == true) {
-            cout << "Betting round done!" << endl;
-            cout << "==============================\n";
-            cout << "         Updated pot         \n";
-            cout << "==============================\n";
-            cout << "              " << pot << "          " << endl;
+        if (isAiFin == true && isPlayerFin == true) {
+            if (player.getinRound() == true) {
+                cout << "Betting round done!" << endl;
+                cout << "==============================\n";
+                cout << "         Updated pot         \n";
+                cout << "==============================\n";
+                cout << "              " << pot << "          " << endl;
+            }
             break;
-
         }
         else {
             isRoundOneFin = false;
@@ -234,12 +239,13 @@ void GameLoop::bettingRound1() {
     }
 }
 
+
 void GameLoop::bettingRound2() {
     ante = initialAnte;
     pot += ante;
-    bool isRoundOneFin = false;
-    bool isAiFin = false;
-    bool isPlayerFin = false;
+    isRoundOneFin = false;
+    isAiFin = false;
+    isPlayerFin = false;
 
     while (isRoundOneFin == false) {
         isRoundOneFin = false; // Assume not finished until proven otherwise
@@ -301,7 +307,7 @@ void GameLoop::bettingRound2() {
                 } else if (player.getDecisionThisRound() == "fold") { // Player folds
                     cout << "You folded..." << endl;
                     isPlayerFin = true;
-                    player.setInRound(false);
+                    player.setInRound(false); // Set player out of the round
                     break; // Exit Player's inner loop
                 }
             }
@@ -310,12 +316,14 @@ void GameLoop::bettingRound2() {
         }
 
         // Check if the round is finished
-        if (isAiFin == true & isPlayerFin == true) {
-            cout << "Betting round done!" << endl;
-            cout << "==============================\n";
-            cout << "         Updated pot         \n";
-            cout << "==============================\n";
-            cout << "              " << pot << "          " << endl;
+        if (isAiFin == true && isPlayerFin == true) {
+            if (player.getinRound() == true) {
+                cout << "Betting round done!" << endl;
+                cout << "==============================\n";
+                cout << "         Updated pot         \n";
+                cout << "==============================\n";
+                cout << "              " << pot << "          " << endl;
+            }
             break;
 
         }
@@ -323,15 +331,16 @@ void GameLoop::bettingRound2() {
             isRoundOneFin = false;
         }
     }
-
-
 }
+
 
 string GameLoop::determineWinner() {
     handValue = -1;
     handValuePlayer = -1;
     bool canCompareAI = false;
     bool canComparePlayer = false;
+
+    // If the player is still in the round, evaluate their hand
     if (player.getinRound() == true) {
         handValuePlayer = player.evaluateHand(communityCards, player.getHand());
         cout << "==============================\n";
@@ -340,66 +349,74 @@ string GameLoop::determineWinner() {
         switch (handValuePlayer) {
             case 8:
                 cout << "Straight Flush" << endl;
-            break;
+                break;
             case 7:
                 cout << "Four of a Kind" << endl;
-            break;
+                break;
             case 6:
                 cout << "Full House" << endl;
-            break;
+                break;
             case 5:
                 cout << "Flush" << endl;
-            break;
+                break;
             case 4:
                 cout << "Straight" << endl;
-            break;
+                break;
             case 3:
                 cout << "Three of a Kind" << endl;
-            break;
+                break;
             case 2:
                 cout << "Two Pair" << endl;
-            break;
+                break;
             case 1:
                 cout << "One Pair" << endl;
-            break;
+                break;
             case 0:
                 cout << "High Card" << endl;
-            break;
+                break;
         }
-    }
-    if (player.getinRound () == true) {
         canComparePlayer = true;
     }
 
+    // If AI is still in the round, evaluate their hand
     if (num1.getInRoundAI() == true) {
         handValue = num1.getHandValue();
-    }
-
-    if (num1.getInRoundAI() == true) {
         canCompareAI = true;
     }
-    if ((canComparePlayer == true) && (canCompareAI == true)) {
+
+    // Determine winner based on hand values if both are in the round
+    if (canComparePlayer && canCompareAI) {
         if (handValue > handValuePlayer) {
             winner = "AI";
-            return winner;
-        }
-        else if (handValue < handValuePlayer) {
+        } else if (handValue < handValuePlayer) {
             winner = "Player";
-            return winner;
-        }
-        else if (handValue == handValuePlayer) {
+        } else if (handValue == handValuePlayer) {
             winner = "Tie";
-            return winner;
         }
     }
-    else if ((canComparePlayer == true) && (canCompareAI == false)) {
+    // If only the player is in the round, they win
+    else if (canComparePlayer) {
         winner = "Player";
-        return winner;
     }
-    else if ((canComparePlayer == false) && (canCompareAI == true)) {
+    // If only the AI is in the round, they win
+    else if (canCompareAI) {
         winner = "AI";
     }
+    // If neither is in the round (both folded), it's a tie
+    else {
+        winner = "no one";
+    }
+
+    return winner;
 }
+
+
+double GameLoop::getEarnings() {
+    double finalEarnings = player.getEarnings();
+    return finalEarnings;
+}
+
+
 
 
 

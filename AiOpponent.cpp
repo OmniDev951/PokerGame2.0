@@ -26,12 +26,13 @@ AiOpponent::AiOpponent() {
     foldFactor = 0;
     matchFactor = 0;
     betFactor = 0;
-    wins = 0;
-    gamesPlayed = 0;
+    wins = 1;
+    gamesPlayed = 1;
     winPercentage = 0;
 }
 
 void AiOpponent::reset() {
+    double moneyNeedToPositive = 0;
     gamesPlayed += 1;
     pairSuitCount = 0;
     pairCount = 0;
@@ -40,7 +41,17 @@ void AiOpponent::reset() {
     inRoundAI = true;
     moneyToBetThisRoundAI = 0;
     moneyAlreadyBetThisRoundAI = 0;
+    moneyAI += 10;
+    if (moneyAI < 0) {
+        moneyNeedToPositive = -1 * (0-moneyAI);
+        moneyAI += moneyNeedToPositive;
+    }
 }
+
+double AiOpponent::getMoneyAI() {
+    return moneyAI;
+}
+
 
 
 void AiOpponent::determineIfWinner(string winner, double pot) {
@@ -390,7 +401,6 @@ void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int h
 
     handValueAI = this->evaluateHandAI(vector<PlayingCard> (aiHand),vector<PlayingCard> (communityCards));
     if (handValueAI > handValuePlayer and winner == "AI") {
-        this->descionThisRoundAI();
         if (descionThisRoundAI == 1) {
             betFactor += 2;
         }
@@ -442,6 +452,7 @@ void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int h
         }
     }
 }
+
 
 
 
