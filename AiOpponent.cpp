@@ -402,16 +402,16 @@ void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int h
     handValueAI = this->evaluateHandAI(vector<PlayingCard> (aiHand),vector<PlayingCard> (communityCards));
     if (handValueAI > handValuePlayer and winner == "AI") {
         if (descionThisRoundAI == 1) {
-            betFactor += 2;
+            betFactor += 10;
         }
         else if (descionThisRoundAI == 2) {
-            matchFactor += 2;
+            matchFactor += 15;
         }
     }
     else if (handValueAI > handValuePlayer and winner == "Player") {
         foldFactor -= 3;
-        matchFactor += 3;
-        betFactor += 5;
+        matchFactor += 6;
+        betFactor += 10;
     }
 
 
@@ -421,19 +421,18 @@ void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int h
     for (int i = 60; i < 100; i+=10){
         if (winPercentage >= i) {
             if (descionThisRoundAI == 1) {
-                betFactor += 2;
-                matchFactor += 1;
+                betFactor += 5;
+                matchFactor += 3;
                 foldFactor --;
             }
             else if (descionThisRoundAI == 2) {
-                betFactor += 1;
-                matchFactor += 2;
+                betFactor += 3;
+                matchFactor += 5;
                 foldFactor --;
             }
         }
     }
-    for (int j = 60; j < 0; j-=10) {
-        if (winPercentage <= j) {
+        if (winPercentage <= 60) {
             if (descionThisRoundAI == 1) {
                 betFactor -= 2;
                 matchFactor -= 1;
@@ -451,7 +450,6 @@ void AiOpponent::adjust(string winner, vector<PlayingCard> communityCards, int h
             }
         }
     }
-}
 
 
 
