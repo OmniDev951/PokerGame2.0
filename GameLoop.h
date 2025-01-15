@@ -26,6 +26,8 @@ private:
     int AIhandvalue;
     bool isBettingRoundOneFin;
     string winner;
+    int handValue;
+    int handValuePlayer;
 public:
     GameLoop();
     void gameLoop();

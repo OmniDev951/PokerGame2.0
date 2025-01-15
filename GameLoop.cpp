@@ -38,6 +38,7 @@ void GameLoop::gameLoop() {
     cout << "==============================" << endl;
     player.determineIfWinner(winner, pot);
     num1.determineIfWinner(winner, pot);
+    num1.adjust(winner, communityCards, handValuePlayer);
     communityCards = vector<PlayingCard> {};
     pot = 0;
     ante = 0;
@@ -327,8 +328,8 @@ void GameLoop::bettingRound2() {
 }
 
 string GameLoop::determineWinner() {
-    int handValue = -1;
-    int handValuePlayer = -1;
+    handValue = -1;
+    handValuePlayer = -1;
     bool canCompareAI = false;
     bool canComparePlayer = false;
     if (player.getinRound() == true) {
