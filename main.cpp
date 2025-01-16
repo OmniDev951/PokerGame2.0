@@ -35,7 +35,7 @@ int main() {
                 cout << "I honestly don't know why you would stop here, you're really getting into a grove..." << endl;
             }
             else if (printedEarnigs < 30) {
-                cout << "I guess I can see why would would quit..." << endl;
+                cout << "I guess I can see why you would would quit..." << endl;
             }
             else if (printedEarnigs < 0) {
                 cout << "Yeesh stopping was a good idea..." << endl;

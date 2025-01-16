@@ -32,12 +32,12 @@ private:
 public:
     AiOpponent();
     PlayingCard deal(DeckOfCards& deck);
-    int makeDesicion(double MoneyToBet, double ante);
+    int makeDesicion(double moneyToBet, double ante);
     int evaluateHandAI(const std::vector<PlayingCard>& aiHand, const std::vector<PlayingCard>& communityCards); // evaluates the value of the ai's hand
-    int makeDesicionsRound2(double MoneyToBet, double ante);
+    int makeDesicionsRound2(double moneyToBet, double ante);
     vector<PlayingCard> getHand();
     int getHandValue();
-    int setHandValue(int AIhandValue);
+    int setHandValue(int AIhandvalue);
     double bet(double ante);
     double match(double ante);
     bool fold();
