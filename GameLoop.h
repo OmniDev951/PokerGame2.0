@@ -28,7 +28,6 @@ private:
     string winner;
     int handValue;
     int handValuePlayer;
-    bool isAllInRound;
     bool isRoundOneFin;
     bool isAiFin;
     bool isPlayerFin;
