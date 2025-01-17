@@ -20,7 +20,6 @@ GameLoop::GameLoop() {
     AIhandvalue = 0;
     isBettingRoundOneFin = false;
     winner = "";
-    isAllInRound = false;
 }
 
 void GameLoop::gameLoop() {
