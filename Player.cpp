@@ -247,7 +247,7 @@ int Player::evaluateHand(const std::vector<PlayingCard>& hand, const std::vector
     for (const auto& [suit, count] : suitCount) { // for all the cards in the vector check for the amount of that suit
         if (count >= 5) { // if the amount of cards of the same suit is equal to or greater than 5
             isFlush = true; // sets isFlush to true
-            break; // breaks off program
+            break; // breaks off the loop
         }
     }
 
@@ -268,7 +268,7 @@ int Player::evaluateHand(const std::vector<PlayingCard>& hand, const std::vector
         }
         if (straightCount >= 5) { // checks to see if the amount of two card straights add up to 5 cards the minimum for a straight
             isStraight = true; // sets isStraight to true
-            break; // stops the program
+            break; // stops the loop
         }
     }
 
@@ -277,7 +277,7 @@ int Player::evaluateHand(const std::vector<PlayingCard>& hand, const std::vector
     for (const auto& [rank, count] : rankCount) {
         if (count == 4) fourCount++; // Checks for four count by seeing if the count of a certain ranks is equal to 4 total
         if (count == 3) threeCount++; // Checks for three count by seeing if the count of a certain ranks is equal to 3 total
-        if (count == 2) pairCount++; // Checks for pair by seeing if there are two occurences of two cards of the same rank
+        if (count == 2) pairCount++; // Checks for pair by seeing if there are two occurrences of two cards of the same rank
     }
 
     // Determine the best hand value
@@ -302,19 +302,19 @@ int Player::evaluateHand(const std::vector<PlayingCard>& hand, const std::vector
     }
 }
 
-
+// sets money already bet this round to 0
 double Player::setMoneyAlreadyBetThisRound() {
     moneyAlreadyBetThisRound = 0;
     return moneyAlreadyBetThisRound;
 }
-
+// returns the players decision this round
 string Player::getDecisionThisRound() {
     return decisionThisRound;
 }
 void Player::setInRound(bool l) {
     inRound = l;
 }
-
+// determines if the player won that round
 void Player::determineIfWinner(string winner, double pot) {
     if (winner == "Player") {
         money += pot;
@@ -323,7 +323,7 @@ void Player::determineIfWinner(string winner, double pot) {
         money = money + (pot/2);
     }
 }
-
+// Returns the players earnings
 double Player::getEarnings() {
     earnings = money - 200;
     return earnings;
